@@ -1,0 +1,784 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+.body{
+    width: 100%;
+    background: #e7e5e5;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(247, 247, 247);
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+.nav-class1{
+    width: 90%;
+    max-width: 1150px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.instalogo{
+    height: 100%;
+    margin-top: 5px;
+    padding-left: 30%;
+    margin-left: -80px;
+}
+.searchbar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 30px;
+    background: #e1e0e0;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-left: -100px;
+}
+.searchbar::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+.icon-items{
+    display: inline-block;
+}
+.icon-items img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.icon-items .user-dp{
+    width: 40px;
+    height: 40px;
+    border-radius: 360px;
+}
+.icon-items .message{
+    height: 40px;
+    width: 45px;
+}
+.icon-items .post{
+    width: 40px;
+    height: 40px;
+    margin: 0px 5px;
+}
+.icon-items .heart{
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px;
+}.icon-items .explore{
+    width: 28px;
+    height: 28px;
+}
+.icon-items .user-dp{
+    margin-left: 10px;
+}
+/*----------status bar----------*/
+.status-bar{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background: #fafafa;
+}
+.status-bar1{
+    width: 70%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 30px;
+
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.statusin{
+    width:100%;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.statusin::-webkit-scrollbar{
+    display: none;
+}
+.status-pic{
+    padding: 3px;
+    background: linear-gradient(45deg,yellow,red);
+    overflow: hidden;
+    width: 86px;
+    border-radius: 360%;
+    margin-left: 10px;
+}
+.status-card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 360px;
+    border:2px solid #fff;
+    cursor: pointer;
+    object-fit: cover;
+}
+.status-card p{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2px;
+    overflow: hidden;
+    color: rgb(96, 95, 95);
+}
+/*----------post---------*/
+.posts{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    margin-top: 40px;
+}
+.dp{
+    border-radius: 360px;
+}
+.user{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.posts{
+    margin-top: 10px;
+}
+.user .opt{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.user p{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(8, 7, 7);
+}
+.profile{
+    display: flex;
+}
+.info .dp{
+    height: 60px;
+    width: 85px;
+    background: none;
+}
+.info .name{
+    margin-top: 15px;
+}
+.post-pic{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.post-matter{
+    width: 100%;
+    padding: 15px;
+}
+.likes{
+    font-weight: bold;
+}
+.matter{
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+.matter span{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.post-time{
+    font-size: 12px;
+    color: #454444;
+}
+.comment-sec{
+    width: 100px;
+    height: 50px;
+    border-radius: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: space-between;
+}
+.add-comment{
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+}
+.comment-btn ,.switch-btn{
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    border: none;
+    color: blue;
+}
+.social-icons{
+    display: flex;
+    margin-left: -10px;
+}
+.social-icons img{
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+}
+.social-icons .sicon1{
+    margin-left: auto;
+}
+/*-----profile--------*/
+.profile-card{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.profile-card .status-card{
+    background: none;
+    width:40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.profilenew img{
+    width: 65px;
+    height: 65px;
+    margin-top: 12px;
+}
+.newname{
+    margin-left: 35px;
+}
+.profile-card .name{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(5, 5, 5);
+    margin-top: 15px;
+    cursor: pointer;
+}
+.newname .sub-name{
+    color: rgb(116, 114, 114);
+    font-size: 12px;
+    margin-top: -14px;
+    font-weight: bold;
+}
+.switch-btn{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+.suggestion{
+    font-size: 14px;
+    color: rgb(143, 142, 142);
+    font-weight: 700;
+}
+/*-----------message----------*/
+.message-bar{
+    width: 58%;
+    height: 625px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    margin: 20px;
+    margin-left: 265px;
+    border-radius: 5px;
+    display: flex;
+}
+.message-bar1{
+    width: 40%;
+    height: 623px;
+    background: #fff;
+    border-right: 1px solid #d3d3d3;
+    overflow-y: scroll;
+}
+.message-bar2{
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
+}
+.message-bar2 img{
+    width: 90px;
+    height: 90px;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 360px;
+    margin-left: 40%;
+    margin-bottom: 10px;
+}
+.message-bar2 p{
+    text-align: center;
+    color: #6d6d6d;
+    font-size: 22px;
+}
+.message-bar2 .short{
+    font-size: 14px;
+    margin-top: -10px;
+}
+.message-bar2 button{
+    margin-left: 39%;
+    opacity: 0.8;
+}
+.edit{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+.edit p{
+    text-align: center;
+    margin:10px ;
+    font-size: 16px;
+    color: #454444;
+    cursor: pointer;
+    justify-content: center;
+}
+.edit img{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+.chat12 img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+.chat1{
+    display: flex;
+}
+.chat22 .usern{
+    margin-bottom: -5px;
+    margin-top: 22px;
+}
+/*---------------------explore---------------------*/
+
+.explore1{
+    width: 60%;
+    margin: 10px;
+    overflow: auto;
+    margin-left: 265px;
+}
+.gallery1{
+    margin: 10px;
+    float: left;
+    width: 270px;
+    height: 270px;
+}
+.gallery1 img{
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+/*------------------------profile--------------*/
+.main-profile{
+    width: 60%;
+    margin: 10px;
+    overflow: auto;
+    margin-left: 265px;
+    margin-top: 30px;
+    padding-left: 60px;
+    display: flex;
+}
+.main-pro1 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 360px;
+}
+.pro12{
+    display: flex;
+    justify-content: center;
+}
+.pro12 p{
+    font-size: 28px;
+    margin-left: 100px;
+    color: #323232;
+}
+.pro12 button{
+    width: 110px;
+    height: 35px;
+    margin-left: 50px ;
+    border: 1px solid #dfdfdf;
+    background:#fefbfb;
+}
+.pro12 img{
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    margin-top: -15px;
+}
+.pro22{
+    margin-left: 110px;
+    display: flex;
+    cursor: pointer;
+}
+.pro22 p{
+    padding-right: 50px;
+    font-size: 17px;
+    color: #4a4949;
+}
+.pro22 p .s1{
+    color: black;
+    font-weight: bold;
+}
+.pro32{
+    margin-left: 110px;
+}
+.pro32 .name1{
+    font-weight: bold;
+    font-size: 17px;
+}
+.name2{
+    margin-top: -20px;
+}
+.highlights{
+    width: 60%;
+    height: auto;
+    margin-left: 265px;
+    border: none;
+}
+.highlights .status-card{
+    margin: 16px;
+}
+.highlights .status-pic {
+    padding: 3px;
+    background: #828181;
+    overflow: hidden;
+    width: 86px;
+    border-radius: 360%;
+    margin-left: 10px;
+}
+.posts-upload{
+    width: 60%;
+    margin-left: 265;
+    margin-top: -10px;
+}
+.row{
+    justify-content: center;
+}
+.row div{
+    margin-top: -5px;
+    color: #aca9a9;
+    cursor: pointer;
+}
+.row div:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.posts-up{
+    width: 100%;
+    margin: 10px;
+}
+.ga1{
+    margin: 10px;
+    float: left;
+    width: 280px;
+    height: 280px;
+}
+.ga1 img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    cursor: pointer;
+}
+/*------------posts upload------------*/
+.posthere{
+    text-align: center;
+    margin-top: 15%;
+}
+.posthere img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.posthere p{
+    font-size: 20px;
+    color: #3b3a3a;
+}
+
+
+.heart{
+    display: none;
+}
+/*------------------------------mobile view---------------------*/
+@media (max-width:1100px){
+    .right, .searchbar{
+        display: none;
+    }
+    .status-bar1, .posts{
+        width: 100%;
+    }
+    .message-bar{
+        margin-left: 50px;
+    }
+    .explore1{
+        width: 80%;
+        margin-left: 55px;
+    }
+    .gallery1{
+        width: 190px;
+        height: 190px;
+    }
+    .gallery1 img{
+        width: 190px;
+        height: 190px;
+    }
+    .left{
+        width:180%;
+    }
+    .navbar{
+        width: 108%;
+    }
+    .message-bar{
+        width: 100%;
+    }
+    .message-bar1{
+        width: 80%;
+    }
+}
+@media(min-width: 0px) and (max-width:600px){
+    .navbar{
+        width: 110%;
+        padding-right: 30px;
+    }
+    .instalogo{
+        margin-left: -100px;
+    }
+    .left{
+        width: 185%;
+    }
+    .icon-items .i1{
+        width: 25px;
+        height: 25px;
+    }
+    .message-bar{
+        width: 100%;
+    }
+    .message-bar1{
+        width: 90%;
+    }
+    .message-bar2{
+        display: none;
+    }
+    .main-profile{
+        margin-left: 10px;
+        width: 100%;
+    }
+    .highlights{
+        margin-left: 10px;
+        width: 110%;
+    }
+    .posts-upload{
+        margin-left: 10px;
+        width: 100%;
+    }
+    .row div{
+        padding: 10px;
+        float: left;
+    }
+    .row{
+        display: flex;
+    }
+    .explore1{
+        width: 100%;
+        margin-left: 25px;
+    }
+    .gallery1{
+        width:110px;
+        height: 110px;
+    }
+    .gallery1 img{
+        width: 110px;
+        height: 110px;
+    }
+    .posthere{
+        margin-top: 200px;
+    }
+    .main-profile{
+        width: 100%;
+    }
+    .main-profile{
+        margin: 8px;
+        overflow: auto;
+        margin-top: 10px;
+        padding-left: 20px;
+        display: flex;
+    }
+    .main-pro1 img{
+        width: 100px;
+        height: 100px;
+        border-radius: 360px;
+        margin-top: 10px;
+    }
+    .main-pro1{
+        width: 100%;
+    }
+    .pro12{
+        display: flex;
+        margin-left: -10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .pro12 p{
+        font-size: 18px;
+        margin-left: 50px;
+        color: #323232;
+    }
+    .pro12 button{
+        width: 110px;
+        height: 35px;
+        margin-left: 20px ;
+        border: 1px solid #dfdfdf;
+        background:#fefbfb;
+        font-size: 13px;
+    }
+    .pro12 img{
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        margin-top: -5px;
+    }
+    .posts-upload hr{
+        width: 110%;
+    }
+    .pro22{
+        margin-left: 40px;
+        margin-top: -10px;
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+    }
+    .pro22 p{
+        padding-right: 20px;
+        font-size: 15px;
+        color: #4a4949;
+    }
+    .pro22 p .s1{
+        color: black;
+        font-weight: bold;
+    }
+    .pro32{
+        margin-left: 40px;
+        margin-top: -10px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .pro32 .name1{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .name2{
+        margin-top: -20px;
+    }
+    .row div{
+        display: none;
+    }
+    .posts-up{
+        width: 100%;
+        margin: 10px;
+    }
+    .ga1{
+        width: 160px;
+        height: 160px;
+    }
+    .ga1 img{
+        width: 160px;
+        height: 160px;
+    }
+    .highlights .status-card{
+        margin: 10px;
+    }
+    .posts-up .ga1{
+        margin-left: 23px;
+    }
+    .explore1{
+        width: 100%;
+        margin-left: 20px;
+        padding: auto;
+    }
+    .gallery1{
+        width: 150px;
+        height: 150px;
+    }
+    .gallery1 img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media(min-width: 400px) and (max-width:499px){
+    .explore1{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .gallery1{
+        width: 120px;
+        height: 120px;
+    }
+    .gallery1 img{
+        width: 120px;
+        height: 120px;
+    }
+}
+    @media(min-width: 400px) and (max-width:450px){
+        .explore1{
+            width: 100%;
+            margin-left: 10px;
+        }
+        .gallery1{
+            width: 110px;
+            height: 110px;
+        }
+        .gallery1 img{
+            width: 110px;
+            height: 110px;
+        }
+}
+@media(min-width: 300px) and (max-width:400px){
+    .explore1{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .gallery1{
+        width: 95px;
+        height: 95px;
+    }
+    .gallery1 img{
+        width: 95px;
+        height: 95px;
+    }
+}
+@media(min-width: 1100px) and (max-width:1300px){
+    .explore1{
+        width: 100%;
+        margin-left: 10px;
+        margin-left: 265px;
+    }
+    .gallery1{
+        width: 240px;
+        height: 240px;
+    }
+    .gallery1 img{
+        width: 240px;
+        height: 240px;
+    }
+}
